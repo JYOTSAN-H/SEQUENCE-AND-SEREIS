@@ -1,9 +1,7 @@
 #include<math.h>
 #include <stdio.h>
-
-
-main(){
-	int a[200],n;
+int main(){
+	int a[45],n,r,lol,bol,q;
 	
 	printf("how many terms are there in sequence:");
 	scanf("%d",&n);
@@ -13,7 +11,7 @@ main(){
 		scanf("%d",&a[i]);
 		
 	}
-	int sum,num,joe,boe,bo=0,j;
+	int sum,num,joe,boe,bo,j,man;
 	//common term for airthmetic series
 	sum=a[1]-a[0];
 	num=a[2]-a[1];
@@ -23,17 +21,17 @@ main(){
 	
 if(sum==num){
 	printf("it's airthmetic series\n");
-	printf("enter \n 1 for sum \n 2 for any term number");
+	printf("enter \n 1 for sum \n 2 for any term number\n");
 	scanf("%d",&j);
 	switch(j){
 		case 1:
-			for(int i=0;i<n;i++){
-		bo=bo+a[i];
-	}
-	printf("sum of the sequence is %d",bo);
+			printf("to how much term you want sum\n");
+			scanf("%d",&bo);
+			man= (bo/2)*(2*a[0]+(bo-1)*sum);
+			printf("sum to the term of %d is %d",bo,man);
 	break;
 	case 2:
-		int r,lol;
+		
 		printf("which term do you want \n");
 		scanf("%d",&r);
 		
@@ -56,7 +54,7 @@ else if(joe=boe){
 	printf("sum of the sequence is %d",bo);
 	break;
 	case 2:
-		int q,bol=0,ko;
+		
 		printf("which term do you want \n");
 		scanf("%d",&q);
 		
@@ -71,7 +69,7 @@ printf("not found error:");
 }
 	
 	
-	
+	return 0;
 	
 	
 	
