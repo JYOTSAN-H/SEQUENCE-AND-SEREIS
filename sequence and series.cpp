@@ -44,14 +44,20 @@ if(sum==num){
 	
 else if(joe=boe){
 	printf("it's a GEOMETRIC series\n");
-	printf("enter \n1 for sum\n 2 for any term number");
+	printf("enter \n1 for sum\n 2 for any term number \n");
 	scanf("%d",&j);
 	switch(j){
 		case 1:
-		for(int i=0;i<n;i++){
-		bo=bo+a[i];
-	}
-	printf("sum of the sequence is %d",bo);
+		printf("to how much term you want sum\n");
+			scanf("%d",&bo);
+			if(joe>1){
+			man= a[0]*((pow(joe,bo) - 1))/(joe-1);
+			printf("sum to the term of %d is %d",bo,man);
+			}
+			else{
+			    man= a[0]*(1-(pow(joe,bo)))/(1-joe);
+			    printf("sum to the term of %d is %d",bo,man);
+			}
 	break;
 	case 2:
 		
